@@ -1,0 +1,258 @@
+/* ###########################*==============*########################################***************##
+############################*=============*#####################################***=============*###
+#############################*============**##########%@@%%%##################***============+**####
+##############################*************########%%%%@@@@@@%%%#############**+===========****#####
+##############################************#######%@%%%%%%@@@@%@@%%####************************######
+###############################*##********####%%@@@%%%@%@@@@@@@@@%%#*************************#######
+#####################################********%%@@@@@@@@@%%%@@%%%%@%%#************************#######
+##%%%%%%%%################**##############**#%%@%%%%%%%%%%%%%%%%%%%%####************************####
+%%##%%%%%%%###%%%%%%%####%%#################%%%#%%%%%%%%%%%%%%%%%%%%####******************##########
+############################################%%%#%##%%%%%%%%%%%##%%%%#####################*########%@
+%################%#########################*%%##%%@@%%%%%%%%%%%%%#%%####******************####@@@@@@
+*##################*#****##################*%%%%@%%%%@@@%@@@@@@@@@%######********#####*****###@@@@@@
+*###########****##+=============*#########**%%%%@@@@@@@@%@@@@@@@@%#@####+===========##*****##%@@@%%%
++###########****##==============*#######***+%#%%%%%%%%@%%%@@@@@%%%###***+===========*#*+***##%@@@@%%
+*###########****#*==============***********+####%%%%%%%%%%%%%%%%%##*****+===========***+++*%@@@@@%%%
+*##########*****#*==============************##%%%%%%%%%%%%%%%%%%%%#*****+===========+**+++*%%%@@@#*#
+*##########*****#*==============**************%%%%@%%@@@@@@%%%%%%%******+===========+**+++*%%%%%@@@%
+*#***#**********#+========*#%%%%%%%%%%@@@@@@%=%%%@@@@@@@@@@@@@@@%#*******===========+**++++%@@@@@@%%
+#*%%##*++++#########*###%%@@@@@@@@@@@@@@%##%*+#%%%%%@@@@@@@@@@%%%**********************++++#@@@@@@@@
+++#*++++***#####*=++++*%@@@@@@@@@@@@@@@***+**#%%%%%%%%@@@@%%%@%%***************======++++%%%%%%%%##%
+++++++*+*+*#####%%@@@%+@@@@@@@@@@@@@@@%******%#%%%%%%%%%%%%%%%###**********#*=+=+++==++==+@@@@@%%%%%
+=+=====+++#%####%@@@@%#@@@@@@@@#++*****#****#%#%%%%%%%%%%%%%%@#####******##***#***++==+==+@@@%%%%%%%
+#####%%%%%%%%%##@@%@@##@@@@%**********######*#%%%%%%%%@@@@%%%%######*******##****++===#%##*@@@%@@%%%
+@%%%%%%%%%%%%%%%@@@@@%@@@@#******#*****########%%%%%@@@@@@@@%%#########*****+=========++#+=#@@%@@@%%
+@@@@@@%####%%%%%##%@@@@@@*******####***##########%@@@@@@@@%%%%#####%####***********%**++==+%%%######
+@@@@@@@@@@@#%%%%#**###@%*******#####################%%%%%%%%%###%%#######**#*****##%@%%%%=+%%%%%%%%%
+@@@@@@@@@@@@@%@@%%@@@@%*****######################%%%%%%%%%%%%###########*##*****+**++#+=++%%%%%%%%%
+@@@@@@@@@@@@@@%@%%@@@@#*#***###########################%%%%%%###############**#**+*+*#*#+=*%%%%%%%%%
+@@@@@@@@@@@@@@@@%%%@@%##*###################################################%###****#******%%%%%%%%@
+@@@@@@@@@@@@@@@@%%%@%#########%###################################################********#%%%%%%%%@ */
+
+
+body {
+    margin: 0;
+}
+
+.about-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.left-container {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+img.law_image {
+    flex: 1;
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+}
+
+h1.title {
+    text-align: left;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p.about_text {
+    max-width: 100%;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.063rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+p.about_text .short-text,
+p.about_text .full-text {
+    display: block;
+}
+
+p.about_text .full-text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.6s ease, margin-top 0.6s ease;
+}
+
+p.about_text.expanded .full-text {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+button.read_more {
+    background-color: #18191e;
+    color: #ffffff;
+    border: 2px solid #15161a;
+    min-width: 11rem;
+    height: 3.125rem;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 1.063rem;
+    border-radius: 0.313rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+button.read_more:hover {
+    background-color: transparent;
+    color: #15161a;
+    transition: background-color 0.3s ease, scale 0.3s ease;
+    scale: 1.1;
+}
+
+.teams_pages {
+    background-color: #18191e;
+    height: 70rem;
+    position: relative;
+    margin-top: 250px;
+}
+
+img.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.TestimonialText{
+    font-weight: bold;
+    font-family: "poppins";
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.container-comands{
+    margin-top: 200px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    background-color: #18191e;
+    width: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .about-content,img.law_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: auto;
+        position: static;
+    }
+
+    h1.title{
+        position: static;
+        text-align: center;
+        font-weight: bolder;
+        width: 100%;
+    }
+
+
+
+    p.about_text {
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+
+    button.read_more {
+        position: static;
+        display: block;
+        text-align: center;
+        margin: 50px;
+        align-self: center;
+    }
+
+    button.read_more:hover {
+        background-color: #15161a;
+        color: #ffffff;
+        transition: background-color 0.3s ease, scale 0.3s ease;
+        scale: 1;
+    }
+
+    .container-comands{
+        margin-top: 0px;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .about-content,img.law_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: auto;
+        position: static;
+    }
+
+    h1.title{
+        position: static;
+        text-align: center;
+        font-weight: bolder;
+        width: 100%;
+    }
+
+
+
+    p.about_text {
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+
+    button.read_more {
+        position: static;
+        display: block;
+        text-align: center;
+        margin: 50px;
+        /* transform: translateX(50%); */
+        /* width: 50%; */
+        align-self: center;
+    }
+
+    button.read_more:hover {
+        background-color: #15161a;
+        color: #ffffff;
+        transition: background-color 0.3s ease, scale 0.3s ease;
+        scale: 1;
+    }
+
+    .container-comands{
+        margin-top: 0px;
+        width: 100vw;
+    }
+}
