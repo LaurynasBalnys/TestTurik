@@ -4,112 +4,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <!-- google form font from psd project -->
+  <title>About Us - ClutchCore</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@500;700;900&display=swap"
     rel="stylesheet">
 
-  <!-- css -->
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/about/main.css">
-  <link rel="stylesheet" href="../css/about/cards.css">
   <link rel="stylesheet" href="../css/navigation/main.css">
   <link rel="stylesheet" href="../css/animations.css">
-
 </head>
 
 <body>
   <div class="dark"></div>
+
+  <!-- HEADER -->
   <header class="split-header">
     <div class="header-left">
-      <div onclick="" class="homeShit logo">ClutchCore</div> <img class="clutch1" src="../images/clutch.png" alt="icon">
+      <img src="../images/clutch.png" alt="ClutchCore" class="clutch1">
+      <div class="logo-text">ClutchCore</div>
     </div>
-    <div class="header-right">
-      <nav class="nav-links">
-        <div>
 
+    <nav class="nav-links">
+      <!-- Your custom local FACEIT logo -->
+      <a href="https://www.faceit.com/en/championship/7ad23f37-5b5b-47d3-824f-186ef2cfba7b/ClutchCoreLT%201x1%20Season%201"
+        class="faceit-link" target="_blank" rel="noopener">
+        <img src="../images/faceit.png" alt="FACEIT" class="faceit-logo">
+      </a>
 
+      <a href="#" class=>Home</a>
+      <a href="#rules">Rules</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hamburger-menu">
+      <span></span><span></span><span></span>
+    </div>
   </header>
 
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
   <div class="about-container">
-    <!-- Video Background -->
-    <video autoplay muted loop class="background-video">
+    <video id="background-video" class="background-video" muted playsinline preload="auto" autoplay loop>
       <source src="../data/test.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
+    <div class="video-overlay"></div>
 
     <div class="about-content">
       <div class="left-container">
-        <h1 class="title">ClutchCore Csgo Tournaments
-          <img class="clutch" src="../images/clutch.png" alt="icon">
-        </h1>
-        <p class="about_text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <button class="read_more">Read More</button>
+        <div class="hero-grid">
+
+          <!-- LEFT: Fixed Glowing Logo -->
+          <div class="hero-logo">
+            <img class="clutch-glowing-logo1" src="../images/clutch.png" alt="Clutch Logo">
+          </div>
+
+          <!-- RIGHT: Title + Text + Read More Button -->
+          <div class="hero-content">
+            <h1 class="title">ClutchCore CS:GO Tournaments</h1>
+
+            <!-- Text wrapper prevents layout jump -->
+            <div class="text-wrapper">
+              <p class="about_text visible-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+              </p>
+
+              <!-- This is the hidden part that expands -->
+              <p class="about_text hidden-text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet.
+              </p>
+            </div>
+
+            <button class="read_more">Read More</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- RULES + MAP POOL SECTION (your existing one) -->
+  <div class="container-comands">
+    <div class="match-rules-container">
+      <div class="match-content">
+        <h1>Match Rules:</h1>
+        <ul>
+          <li>8-Team Round Robin Tournament followed by playoffs with the finals played at GameSync.</li>
+          <li>During Round Robin, each match will consist of 2 maps played.</li>
+          <li>Before the match, there will be a captains meeting to determine which maps will be played.</li>
+          <li>Each team bans two maps and then each picks a map to play.</li>
+          <li>Matches start at 5pm and 7pm and are played on Monday or Wednesday nights.</li>
+          <li>Pausing is only available for severe technical issues.</li>
+          <li>1 timeout available per team per map (60 seconds).</li>
+        </ul>
+
+        <h1>Match Structure:</h1>
+        <ul>
+          <li>At least one match each night will be streamed and casted.</li>
+          <li>It is expected that everyone plays in a meaningful and sportsmanlike manner.</li>
+        </ul>
+
+        <h1 class="map-pool-title">Map Pool (Active Duty)</h1>
+        <div class="map-pool-wrapper">
+          <div class="map-pool-grid">
+            <div class="map-row">
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/dust.jpg');"></div><span
+                  class="map-name">dust2</span>
+              </div>
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/inferno.png');"></div><span
+                  class="map-name">inferno</span>
+              </div>
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/ancient.png');"></div><span
+                  class="map-name">ancient</span>
+              </div>
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/mirage.png');"></div><span
+                  class="map-name">mirage</span>
+              </div>
+            </div>
+            <div class="map-row map-row--three">
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/train.png');"></div><span
+                  class="map-name">train</span>
+              </div>
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/overpass.png');"></div><span
+                  class="map-name">overpass</span>
+              </div>
+              <div class="map-card">
+                <div class="map-image" style="background-image: url('../images/nuke.png');"></div><span
+                  class="map-name">nuke</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-container">
+        <img class="clutch-logo glowing-logo" src="../images/clutch.png" alt="Clutch Logo">
       </div>
     </div>
   </div>
 
-  <div class="container-comands">
+  <!-- FOOTER -->
+  <footer class="clutch-footer">
+    <div class="footer-content">
 
-    <h1 class="TestimonialText">Testimonial <img class="clutch2" src="../images/clutch.png" alt="icon.png"></h1>
-
-    <div class="slider-container">
-      <div class="slider" id="slider">
-
-
-
-
-
+      <!-- Logo + Tagline -->
+      <div class="footer-logo-section">
+        <img src="../images/clutch.png" alt="ClutchCore" class="footer-main-logo">
+        <p class="footer-tagline">Professional CS2 Tournaments</p>
       </div>
-      <div class="dots">
-        <div class="dot active" onclick="goToSection(0)"></div>
-        <div class="dot" onclick="goToSection(1)"></div>
-        <div class="dot" onclick="goToSection(2)"></div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#">Home</a>
+        <a href="#rules">Rules</a>
+        <a href="https://www.faceit.com/en/organisers/clutchcore" target="_blank">FACEIT Hub</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="footer-socials">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://discord.gg/j3bTM6CW" target="_blank"><img src="../data/icons8-discord.svg" alt="Discord"></a>
+          <a href="#" target="_blank"><img src="../images/fb.png" alt="Twitter"></a>
+          <a href="#" target="_blank"><img src="../images/insta.png" alt="Instagram"></a>
+          <a href="#" target="_blank"><img src="../images/linkedin.png" alt="Twitch"></a>
+        </div>
+      </div>
+
+      <!-- Newsletter (optional – looks fire) -->
+      <div class="footer-newsletter">
+        <h4>Join the Clutch</h4>
+        <form>
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-wrapper">
-        <h3 class="newsletter-title">Contact Us</h3>
+    <div class="footer-bottom">
+      <p>© 2025 ClutchCore. All rights reserved. | Made with blood, sweat & AWP flicks</p>
+    </div>
+  </footer>
 
-        <label for="newsletter" class="newsletter-label">Enter Your Email</label>
-        <input type="email" id="newsletter" class="newsletter-input" />
-        <button class="subscribe-btn">SUBSCRIBE</button>
+  <!-- Scripts -->
+  <script src="../js/navigation.js"></script>
+  <script src="../js/cards.js"></script>
+  <script src="../js/anim/about.js"></script>
+  <script>
 
-        <div class="follow-us">
-          <h4>FOLLOW US</h4>
-          <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank">
-              <img src="../images/fb.png" alt="Facebook" />
-              <a href="https://x.com/" target="_blank">
-                <img src="../images/twitter.png" alt="Twitter" /></a>
-              <a href="https://www.linkedin.com" target="_blank">
-                <img src="../images/linkedin.png" alt="LinkedIn" /></a>
-              <a href="https://www.instagram.com" target="_blank">
-                <img src="../images/insta.png" alt="Instagram" /></a>
-          </div>
-        </div>
-
-        <hr class="footer-line" />
-        <p class="copyright">
-          Copyright 2019 All Right Reserved By Free html Templates
-        </p>
-      </div>
-    </footer>
-
-    <script src="../js/navigation.js"></script>
-    <script src="../js/cards.js"></script>
-    <script src="../js/anim/about.js"></script>
-    <script src="../js/about.js"></script>
+  </script>
 </body>
 
 </html>
